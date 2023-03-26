@@ -1,5 +1,12 @@
 body {
   background-color: #212121;
+  transition: background-color 0.3s ease-in-out;
+  color: #fff;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #212121;
 }
 
 form {
@@ -12,11 +19,19 @@ form {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+#theme-toggler {
+  cursor: pointer;
+}
+
+form.light-mode {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 label {
   font-size: 18px;
   margin-bottom: 5px;
-  color: #fff;
+  color: inherit;
 }
 
 input {
@@ -27,6 +42,11 @@ input {
   background-color: #a1a0a0;
   color: #fff;
   outline: none;
+}
+
+input.light-mode {
+  background-color: #f2f2f2;
+  color: #212121;
 }
 
 #captcha-container {
@@ -49,6 +69,11 @@ input {
   margin-right: 10px;
 }
 
+#captcha-code.light-mode {
+  background-color: #212121;
+  color: #fff;
+}
+
 .btn {
   padding: 10px;
   background-color: #595c46;
@@ -61,8 +86,17 @@ input {
   margin: 15px 0;
 }
 
+.btn.light-mode {
+  background-color: #212121;
+  color: #fff;
+}
+
 button[type="submit"]:hover {
   background-color: #8ce78c;
+}
+
+button[type="submit"].light-mode:hover {
+  background-color: #66bb6a;
 }
 
 @media only screen and (max-width: 768px) {

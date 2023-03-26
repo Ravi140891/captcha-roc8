@@ -7,6 +7,15 @@ function generateCaptcha() {
   captchaCodeContainer.textContent = captchaCode.toString();
 }
 
+const themeToggler = document.getElementById("theme-toggler");
+const body = document.querySelector("body");
+const form = document.querySelector("form");
+
+themeToggler.addEventListener("click", () => {
+  body.classList.toggle("light-mode");
+  form.classList.toggle("light-mode");
+});
+
 window.onload = generateCaptcha;
 
 const refreshButton = document.getElementById("refresh-button");
